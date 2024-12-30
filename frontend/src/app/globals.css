@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+  background-color: #2353aa;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+html.light {
+  background-color: rgb(212, 212, 212);
+  color: rgb(241, 7, 7);
+}
+
+body {
+  position: relative;
+  min-height: 100svh;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* background-image: url("/_next/static/media/bg.3eb6b18c.jpeg"); */
+  background-color: white;
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  transition: background-image 0.5s ease; /* Smooth transition for background changes */
+  margin: 0; /* Removes default body margin */
+  height: 100vh; /* Ensures body height is full viewport height */
+}
+
+@media (min-width: 600px) {
+  html {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  body {
+    margin: auto;
+    border-radius: 20px;
+    width: 390px;
+    height: 760px;
+    min-height: 0px;
+    overflow: hidden;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
